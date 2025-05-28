@@ -1,0 +1,15 @@
+<clr-modal [(clrModalOpen)]="isOpen">
+  <h3 class="modal-title">{{ title }}</h3>
+
+  <div class="modal-body">
+    <p [innerHTML]="message | safeHtml"></p>
+  </div>
+
+  <div class="modal-footer">
+    <button type="button"
+            class="btn btn-primary"
+            (click)="isOpen = false">
+      {{ 'Close' | translate }}
+    </button>
+  </div>
+</clr-modal>

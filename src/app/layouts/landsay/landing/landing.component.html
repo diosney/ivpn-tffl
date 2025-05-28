@@ -1,0 +1,9 @@
+<app-landsay-includes></app-landsay-includes>
+
+<app-landsay-landing-layout-header></app-landsay-landing-layout-header>
+
+<app-landsay-landing-layout-page-heading *ngIf="!isAtLandingHomePage && !isAtLandingLoginPage"></app-landsay-landing-layout-page-heading>
+
+<router-outlet></router-outlet>
+
+<app-landsay-landing-layout-footer></app-landsay-landing-layout-footer>

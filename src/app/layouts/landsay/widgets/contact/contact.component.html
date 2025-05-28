@@ -1,0 +1,102 @@
+<section class="section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="text-center">
+          <h2 class="mb-3" translate>Transform Your Fleet Management with Us</h2>
+
+          <p class="text-dark-emphasis mb-0" translate>
+            Discover how our Approved Fleet program can simplify fleet operations, reduce costs, and save time. Whether
+            you're starting
+            fresh or optimizing existing solutions, we're here to help you succeed effortlessly.
+          </p>
+
+          <div class="mt-4 pt-4">
+
+          </div>
+        </div>
+
+        <form class="contact-form needs-validation"
+              [ngClass]="{'was-validated': contactFormService.form.touched}"
+              [formGroup]="contactFormService.form"
+              novalidate>
+
+          <alert *ngIf="shouldShowAlert && contactFormService.form.touched"
+                 [type]="alertType">
+
+            {{ alertMessage }}
+          </alert>
+
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="position-relative mb-3">
+                <span class="input-group-text"><i class="mdi mdi-account-outline"></i></span>
+
+                <input id="name"
+                       type="text"
+                       class="form-control"
+                       appDisableAutofill
+                       required
+                       [formControlName]="'name'"
+                       [placeholder]="'Enter Your Name' | translate">
+
+                <div class="invalid-feedback" *ngIf="contactFormService.getFieldControl('name')?.invalid">
+                  {{ contactFormService.getSingleErrorMessageByName('name') }}
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-12">
+              <div class="position-relative mb-3">
+                <span class="input-group-text"><i class="mdi mdi-file-document-outline"></i></span>
+
+                <input id="subject"
+                       type="text"
+                       class="form-control"
+                       appDisableAutofill
+                       required
+                       [formControlName]="'subject'"
+                       [placeholder]="'Subject' | translate">
+
+                <div class="invalid-feedback" *ngIf="contactFormService.getFieldControl('subject')?.invalid">
+                  {{ contactFormService.getSingleErrorMessageByName('subject') }}
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-12">
+              <div class="position-relative mb-3">
+                <span class="input-group-text align-items-start"><i class="mdi mdi-comment-text-outline"></i></span>
+
+                <textarea id="comments"
+                          rows="4"
+                          class="form-control"
+                          appDisableAutofill
+                          required
+                          [formControlName]="'message'"
+                          [placeholder]="'Enter Your Message' | translate"></textarea>
+
+                <div class="invalid-feedback" *ngIf="contactFormService.getFieldControl('message')?.invalid">
+                  {{ contactFormService.getSingleErrorMessageByName('message') }}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-12 text-center text-md-end">
+              <a [href]="mailtoUrl"
+                 id="submit"
+                 class="btn btn-primary"
+                 (click)="onSendMessage($event)"
+                 translate>
+
+                Send Message
+              </a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

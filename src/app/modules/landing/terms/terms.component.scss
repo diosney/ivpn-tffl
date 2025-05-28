@@ -1,0 +1,12 @@
+div > ul {
+  list-style-type : none;
+  padding-left    : 0 !important;
+
+  > li {
+    margin-bottom : .5rem;
+
+    > ul {
+      padding-left : 2rem !important;
+    }
+  }
+}

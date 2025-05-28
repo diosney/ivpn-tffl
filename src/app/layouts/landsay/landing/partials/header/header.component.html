@@ -1,0 +1,120 @@
+<div id="preloader">
+  <div id="status">
+    <div class="load">
+      <hr/>
+      <hr/>
+      <hr/>
+      <hr/>
+    </div>
+  </div>
+</div>
+
+<nav id="navbar" class="navbar navbar-expand-lg fixed-top sticky"
+     (window:scroll)="windowScroll()">
+
+  <div class="container" appScrollspy
+       [spiedTags]="['section']"
+       (sectionChange)="onSectionChange($event)">
+
+    <a class="navbar-brand" href="/"
+       [routerLink]="'/'"
+       (click)="closeMenu()"
+       href="javascript:void(0);">
+
+      <img [src]="merchantSettingsService.data?.ui?.landing?.appHeaderLogoUrl" alt="">
+
+      <span>
+        <strong [innerHTML]="'Supporting the Social<br>Security Trust Fund'| translate | safeHtml"></strong>
+      </span>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            (click)="toggleMenu()" aria-label="Toggle navigation">
+
+      <i class="mdi mdi-menu text-dark-emphasis"></i>
+    </button>
+
+    <div class="collapse navbar-collapse" scrollSpy id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0" id="navbar-navList">
+        <li class="nav-item">
+          <a [ngxScrollTo]="'#home'" class="nav-link"
+             [routerLink]="'/faq'"
+             [routerLinkActive]="'active'"
+             (click)="closeMenu()"
+             translate
+             href="javascript:void(0);" [innerHTML]="'Frequently<br>Asked Questions'| translate | safeHtml"></a>
+        </li>
+
+        <li class="nav-item">
+          <a [ngxScrollTo]="'#home'" class="nav-link"
+             [routerLink]="'/tos'"
+             [routerLinkActive]="'active'"
+             (click)="closeMenu()"
+             translate
+             href="javascript:void(0);" [innerHTML]="'Terms Of<br>Service'| translate | safeHtml"></a>
+        </li>
+
+        <li class="nav-item">
+          <a [ngxScrollTo]="'#home'" class="nav-link"
+             [routerLink]="'/privacy'"
+             [routerLinkActive]="'active'"
+             (click)="closeMenu()"
+             translate
+             href="javascript:void(0);" [innerHTML]="'Privacy<br>Policy'| translate | safeHtml"></a>
+        </li>
+
+        <li dropdown id="language-list-item" class="nav-item dropdown">
+          <a class="nav-link"
+             id="navbarDropdown"
+             role="button"
+             dropdownToggle
+             aria-expanded="false">
+
+            <app-flag-image-from-language [language]="currentLanguage"></app-flag-image-from-language>
+
+            <i class="mdi mdi-chevron-down"></i>
+          </a>
+
+          <ul *dropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li *ngFor="let language of SupportedLanguagesList">
+              <a class="nav-link"
+                 href="javascript:void(0);"
+                 [ngClass]="{'active': language.id === currentLanguage}"
+                 (click)="changeLanguage(language.id)">
+
+                <app-flag-image-from-language [language]="language.id"></app-flag-image-from-language>
+                {{ language.text }}
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <ul class="buttons-container list-inline mb-0 ps-lg-4 ms-2 text-md-center text-center">
+        <li class="list-inline-item">
+          <a href="javascript:void(0);"
+             type="button"
+             class="btn btn-secondary"
+             [routerLink]="'/'"
+             (click)="closeMenu()">
+
+            <span translate>
+              Register
+            </span>
+          </a>
+        </li>
+
+        <li class="list-inline-item">
+          <a href="javascript:void(0);"
+             type="button"
+             class="btn btn-primary"
+             (click)="closeMenu()">
+
+            {{'Sign In'| translate}}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

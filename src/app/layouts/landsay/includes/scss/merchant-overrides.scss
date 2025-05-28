@@ -1,0 +1,47 @@
+.navbar .navbar-nav .nav-item > .nav-link:hover,
+.navbar .navbar-nav .nav-item.dropdown .dropdown-menu li .nav-link:hover {
+  color : var(--app-header-link-hover-color);
+}
+
+.navbar .navbar-nav .nav-item > .nav-link:active,
+.navbar .navbar-nav .nav-item > .nav-link.active,
+.navbar .navbar-nav .nav-item.dropdown .dropdown-menu li .nav-link.active {
+  color : var(--app-header-link-active-color);
+}
+
+.form-control:focus {
+  border-color : var(--app-form-control-focus-border-color);
+}
+
+.social-list .social-icon:hover {
+  color        : var(--app-social-icon-hover-color);
+  border-color : var(--app-social-icon-hover-border-color);
+}
+
+#back-to-top:hover {
+  background-color : var(--app-back-to-top-hover-background-color);
+}
+
+.text-primary {
+  color : var(--app-text-primary-color) !important;
+}
+
+.feature-icon {
+  background-color : var(--app-feature-icon-background-color);
+  color            : var(--app-feature-icon-color);
+}
+
+.timeline-page .works-description-left,
+.timeline-page .works-description-right {
+  &::after {
+    background-color : var(--app-timeline-bubble-background-color);
+  }
+
+  &:hover::after {
+    box-shadow : 0 0 5px 2px var(--app-timeline-bubble-hover-box-shadow-color);
+  }
+}
+
+.bg-home4 {
+  background-color : var(--app-home-primary-section-background-color);
+}

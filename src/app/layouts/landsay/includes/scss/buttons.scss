@@ -1,0 +1,126 @@
+
+.btn-primary {
+  background   : var(--app-btn-primary-background);
+  border-color : var(--app-btn-primary-border-color) !important;
+
+  &:hover {
+    background   : var(--app-btn-primary-hover-background);
+    border-color : var(--app-btn-primary-hover-border-color) !important;
+    box-shadow   : 0 8px 20px -6px var(--app-btn-primary-hover-box-shadow-color);
+  }
+
+  &:focus,
+  .focus {
+    background   : var(--app-btn-primary-focus-background);
+    border-color : var(--app-btn-primary-focus-border-color) !important;
+    box-shadow   : 0 8px 20px -6px var(--app-btn-primary-focus-box-shadow-color);
+  }
+
+  &:active,
+  &.active,
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled):active:focus,
+  & .open > .dropdown-toggle.btn-primary {
+    background   : var(--app-btn-primary-active-background);
+    border-color : var(--app-btn-primary-active-border-color) !important;
+    box-shadow   : 0 8px 20px -6px var(--app-btn-primary-active-box-shadow-color);
+  }
+}
+
+.btn-outline-primary {
+  color        : var(--app-btn-outline-primary-color);
+  border-color : var(--app-btn-outline-primary-border-color) !important;
+
+  &:hover {
+    background : var(--app-btn-outline-primary-hover-background);
+    box-shadow : 0 8px 20px -6px var(--app-btn-outline-primary-hover-box-shadow-color);
+  }
+
+  &:focus,
+  .focus {
+    background : var(--app-btn-outline-primary-focus-background);
+    box-shadow : 0 8px 20px -6px var(--app-btn-outline-primary-focus-box-shadow-color);
+  }
+
+  &:active,
+  &.active,
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled):active:focus,
+  & .open > .dropdown-toggle.btn-primary {
+    background : var(--app-btn-outline-primary-active-background);
+    box-shadow : 0 8px 20px -6px var(--app-btn-outline-primary-active-box-shadow-color);
+  }
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:active,
+.btn-outline-primary.active,
+.btn-outline-primary.focus,
+.btn-outline-primary:not(:disabled):not(.disabled):active,
+.btn-outline-primary:not(:disabled):not(.disabled):active:focus,
+.btn-outline-primary .open > .dropdown-toggle.btn-primary {
+  //background: var(--app-btn-outline-primary-hover-background);
+  //background-color: var(--app-btn-outline-primary-hover-background) !important;
+}
+
+.btn-secondary {
+  background   : var(--app-btn-secondary-background);
+  border-color : var(--app-btn-secondary-border-color) !important;
+
+  &:hover {
+    background   : var(--app-btn-secondary-hover-background);
+    border-color : var(--app-btn-secondary-hover-border-color) !important;
+    box-shadow   : 0 8px 20px -6px var(--app-btn-secondary-hover-box-shadow-color);
+  }
+
+  &:focus,
+  .focus {
+    background   : var(--app-btn-secondary-focus-background);
+    border-color : var(--app-btn-secondary-focus-border-color) !important;
+    box-shadow   : 0 8px 20px -6px var(--app-btn-secondary-focus-box-shadow-color);
+  }
+
+  &:active,
+  &.active,
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled):active:focus,
+  & .open > .dropdown-toggle.btn-secondary {
+    background   : var(--app-btn-secondary-active-background);
+    border-color : var(--app-btn-secondary-active-border-color) !important;
+    box-shadow   : 0 8px 20px -6px var(--app-btn-secondary-active-box-shadow-color);
+  }
+}
+
+.btn-sm {
+  padding       : .5rem 1rem !important;
+  font-size     : .875rem !important;
+  border-radius : var(--bs-border-radius-sm) !important;
+}
+
+.btn-outline-secondary {
+  --bs-btn-color                 : var(--bs-secondary);
+  --bs-btn-border-color          : var(--bs-secondary) !important;
+  --bs-btn-hover-bg              : var(--bs-secondary);
+  --bs-btn-hover-border-color    : var(--bs-secondary);
+  --bs-btn-active-bg             : var(--bs-secondary);
+  --bs-btn-active-border-color   : var(--bs-secondary);
+  --bs-btn-disabled-color        : var(--bs-secondary);
+  --bs-btn-disabled-border-color : var(--bs-secondary);
+}
+
+.btn-outline-secondary {
+  &:hover,
+  &:focus,
+  &:active,
+  &.active,
+  &.focus,
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled):active:focus,
+  & .open > .dropdown-toggle.btn-outline-secondary {
+    box-shadow : 0 8px 20px -6px var(--bs-secondary);
+    transform  : translateY(-6px);
+  }
+
+  border-color : var(--bs-btn-border-color);
+}

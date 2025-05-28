@@ -1,0 +1,59 @@
+::ng-deep {
+  .clr-input-wrapper input,
+  .clr-control-container {
+    width : 100% !important;
+  }
+}
+
+.buttons-container {
+  padding-left  : .6rem;
+  padding-right : .6rem;
+}
+
+.clr-timeline {
+  margin-bottom : 2rem;
+}
+
+h3 {
+  margin-top    : 3rem;
+  margin-bottom : 1rem;
+}
+
+h4 + p {
+  margin-top : .5rem;
+}
+
+p + h4 {
+  margin-top : 2rem;
+}
+
+.large-descriptions-checkbox-group {
+  .clr-checkbox-wrapper {
+    display : block;
+
+    & + .clr-checkbox-wrapper {
+      margin-top : 1.5rem;
+    }
+  }
+}
+
+.custom-button-group {
+  button {
+    float      : left;
+    margin-top : var(--clr-btn-vertical-margin, 0.3rem) !important;
+  }
+}
+
+.mistake-row {
+  margin-top : 1rem;
+}
+
+.custom-field-container {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  .clr-subtext {
+    color: #454545;
+    font-size: .65rem;
+  }
+}

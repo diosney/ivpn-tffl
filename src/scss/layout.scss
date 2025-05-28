@@ -1,0 +1,26 @@
+body {
+  animation       : gradientAnimation 15s ease infinite;
+  background      : linear-gradient(120deg, #002868, #FFFFFF, #ae0026);
+  background-size : 300% 300%;
+
+  display         : flex;
+  height          : 100vh;
+
+  app-root {
+    display : flex;
+    flex    : 1;
+
+    app-landsay-landing-layout {
+      display        : flex;
+      flex           : 1;
+      flex-direction : column;
+
+      app-landing-home,
+      app-landing-faq,
+      app-landing-terms,
+      app-landing-privacy {
+        flex-grow : 1;
+      }
+    }
+  }
+}

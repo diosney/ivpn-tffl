@@ -1,0 +1,4 @@
+// Here and not in component due bug not getting the proper styles inside [innerHtml].
+app-landsay-widget-price-circle .mid-text sup {
+  top : -.3em !important;
+}

@@ -1,0 +1,25 @@
+version: 0.2
+
+env:
+  variables:
+    BUILD_FOLDER: "dist/tffl-angular"
+phases:
+  install:
+    runtime-versions:
+      nodejs: 18
+    commands:
+      - echo Installing source NPM dependencies...
+      - npm install
+      - npm install -g @angular/cli@17.3.8
+  build:
+    commands:
+      - echo Build started 1
+      - if [ "${env}" = "dev" ]; then NODE_OPTIONS=--max_old_space_size=8192 ; ng build --configuration=development; fi
+      - if [ "${env}" = "prod" ]; then NODE_OPTIONS=--max_old_space_size=8192 ; ng build --configuration=production; fi
+  post_build:
+    commands:
+      - aws cloudfront create-invalidation --distribution-id $distribution --paths '/*'
+artifacts:
+  files:
+    - '**/*'
+  base-directory: 'dist/tffl-angular'

@@ -1,0 +1,107 @@
+<accordion>
+  <accordion-group #accordionGroup1>
+    <button accordion-heading
+            type="button">
+
+      <span [innerHTML]="'What is the difference between a \{\{dba\}\} Approved Fleet Debit Card and a Fleet Credit Card that I applied for with brands such as Wex, Voyager, and CorPay or a major oil branded fleet card?' | translate:{dba:merchantSettingsService.data?.dba} | safeHtml">
+      </span>
+
+      <app-landsay-page-accordion-indicator-icon
+        [accordionRef]="accordionGroup1"></app-landsay-page-accordion-indicator-icon>
+    </button>
+
+    <div [innerHTML]="'The \{\{dba\}\} Approved Fleet Debit Card differs from fleet credit cards like WEX, Voyager, and CorPay in key areas. It links directly to a business checking account, authorizing real-time transactions based on available funds, with no credit checks required. In contrast, fleet credit cards operate on a credit basis, requiring credit approval and purchases are limited to your credit limit. As a neighbor, we don’t charge fees often charged by fleet credit card companies.' | translate:{dba:merchantSettingsService.data?.dba} | safeHtml">
+
+    </div>
+  </accordion-group>
+
+  <accordion-group #accordionGroup2>
+    <button accordion-heading
+            type="button">
+
+      <span [innerHTML]="'What types of reports are available with the \{\{dba\}\} Approved Fleet Card?' | translate:{dba:merchantSettingsService.data?.dba} | safeHtml">
+
+      </span>
+
+      <app-landsay-page-accordion-indicator-icon
+        [accordionRef]="accordionGroup2"></app-landsay-page-accordion-indicator-icon>
+    </button>
+
+    <div [innerHTML]="'The \{\{dba\}\} Approved Fleet Card provides comprehensive reporting features designed to help businesses manage their fleet operations efficiently. Users can access detailed transaction data, including fuel purchases by drivers, locations, dates, and times, enabling precise tracking of expenses. Additionally, reports can be customized to monitor spending patterns, identify potential savings opportunities, and ensure compliance with company policies.' | translate:{dba:merchantSettingsService.data?.dba} | safeHtml">
+    </div>
+  </accordion-group>
+
+  <accordion-group #accordionGroup3>
+    <button accordion-heading
+            type="button">
+
+      <span [innerHTML]="'How can I save money with the \{\{dba\}\} Approved Fleet Card?'| translate:{dba:merchantSettingsService.data?.dba} | safeHtml">
+      </span>
+
+      <app-landsay-page-accordion-indicator-icon
+        [accordionRef]="accordionGroup3"></app-landsay-page-accordion-indicator-icon>
+    </button>
+
+    <div translate>
+      When your driver fuels up a vehicle, the driver enters the card along with a unique PIN assigned to them. The
+      pump instantly applies a $0.05 per gallon discount — it's that straightforward. The more your drivers
+      refuel, the more savings your business enjoys!
+    </div>
+  </accordion-group>
+
+  <accordion-group #accordionGroup3>
+    <button accordion-heading
+            type="button">
+
+      <span translate>
+        Are there any monthly fees?
+      </span>
+
+      <app-landsay-page-accordion-indicator-icon
+        [accordionRef]="accordionGroup3"></app-landsay-page-accordion-indicator-icon>
+    </button>
+
+    <div [innerHTML]="'The \{\{dba\}\} Approved Fleet Card does not charge monthly or annual membership fees.' | translate:{dba:merchantSettingsService.data?.dba} | safeHtml">
+
+    </div>
+  </accordion-group>
+
+  <accordion-group #accordionGroup4>
+    <button accordion-heading
+            type="button">
+
+      <span translate>
+        How can I request a new card?
+      </span>
+
+      <app-landsay-page-accordion-indicator-icon
+        [accordionRef]="accordionGroup4"></app-landsay-page-accordion-indicator-icon>
+    </button>
+
+    <div>
+      {{'New or replacement cards can be easily ordered through your Fleet Manager account at' | translate}}&nbsp;<a
+      href="javascript: void(0);"
+      [routerLink]="'/login'"
+      target="_blank" translate>Fleet Administration Portal</a>
+    </div>
+  </accordion-group>
+
+  <accordion-group #accordionGroup5>
+    <button accordion-heading
+            type="button">
+
+      <span translate>
+        How can I suspend a card?
+      </span>
+
+      <app-landsay-page-accordion-indicator-icon
+        [accordionRef]="accordionGroup5"></app-landsay-page-accordion-indicator-icon>
+    </button>
+
+    <div translate>
+      To suspend a card, once logged into the fleet administration portal, go to the "Cards" tab and select
+      "View Cards." Find the card you wish to update, then click "Select" followed by "Change Card Status." From
+      the drop-down menu, choose "Suspended" and confirm by clicking "Apply."
+    </div>
+  </accordion-group>
+</accordion>

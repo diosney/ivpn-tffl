@@ -1,0 +1,13 @@
+.visibility-hidden {
+  visibility : hidden !important;
+}
+
+.collapsible-content {
+  max-height: 3000px;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.collapsible-content.collapsed {
+  max-height: 0;
+}

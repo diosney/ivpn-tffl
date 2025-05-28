@@ -1,0 +1,35 @@
+.circle {
+  position         : relative;
+  background-color : var(--app-widget-price-circle-background-color);
+  border           : 8px solid var(--app-widget-price-circle-border-color);
+  border-radius    : 50%;
+  font-weight      : 700;
+  font-size        : 1.6rem;
+  line-height      : 1;
+  margin-left      : auto;
+  margin-right     : auto;
+  padding-top      : 1rem;
+  text-align       : center;
+  text-transform   : uppercase;
+  height           : 14rem;
+  width            : 14rem;
+}
+
+.upper-text {
+}
+
+.mid-text {
+  color        : var(--app-widget-price-circle-mid-text-color);
+  font-size    : 6rem;
+  text-shadow  : 0 1px 5px black;
+  padding-left : .9rem;
+
+  sup, .sup {
+    font-size : 3rem;
+    // Defined in `ìncludes` since due a bug with [innerHtml] it wasn't working.
+    //top       : -.3em !important;
+  }
+}
+
+.bottom-text {
+}
