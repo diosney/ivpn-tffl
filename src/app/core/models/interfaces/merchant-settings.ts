@@ -7,87 +7,36 @@ export interface MerchantSettings {
 
   ui?: UiConfig;
   fixtures?: {
-    drivers: Array<{
-      phoneNumber: string;
-    }>;
-    cards: Array<{
-      driverPhoneNumber: string;
-      store?: string;
-      vehicleId?: string;
-    }>;
-    enrollment?: {
+    enrollment: {
       step1: {
-        isReviewTermsEnabled: boolean;
-        isProofOfLegalStatusEnabled: boolean;
-        isValidationFEINEnabled: boolean;
+        email: string;
+        password: string;
       },
       step2: {
-        emailVerificationCode: string;
-        phoneVerificationCode: string;
+        code: string;
+      },
+      step3: {
         firstName: string;
-        middleName: string;
         lastName: string;
-        email: string;
-        phone: string;
-        dob: string;
-        ssn: string;
-        password?: string;
-        confirmPassword?:string;
-        address?: {
-          street: string;
+        gender: string;
+        dob: {
+          month: string;
+          day: string;
+          year: string;
+        };
+        pin: string;
+        address: {
+          address1: string;
+          address2: string;
           city: string;
           state: string;
           zipcode: string;
         };
-      },
-      step3: {
-        businessName: string;
-        dba: string;
-        address: {
-          street: string;
-          street2?: string;
-          city: string;
-          state: string;
-          zipcode: string;
-        },
-        email: string;
         phone: string;
-        fein: string;
-        feinState: string;
-        incorporationState: string;
-        dunn: string;
-        businessSinceMonths: string;
-        businessSinceYears: string;
-        industry: string;
-        businessStructure: string;
-        annualGrossRevenue: string;
-        averageMonthlyExpenses: string;
-        averageWeeklyExpenses: string;
-        emailVerificationCode: string;
-        phoneVerificationCode: string;
-      },
-      step4: {
-        bankName: string;
-        months: string;
-        years: string;
-        bank: {
-          address1: string;
-          address2?: string;
-          city: string;
-          state: string;
-          zipcode: string;
-        },
-        contact: {
-          name: string;
-          title: string;
-          phone: string;
-        },
-        businessName: string;
-        routing: string;
-        account: string;
-        isBusinessChecking: boolean;
-        isMobilePhone?: boolean;
-        isBankInfoIsOk: boolean;
+        ssn: string;
+        driverLicense: string;
+        driverLicenseState: string;
+        agreeToConditions: boolean;
       }
     }
   };

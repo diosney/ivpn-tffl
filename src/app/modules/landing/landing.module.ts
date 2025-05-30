@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { NzStepsModule } from 'ng-zorro-antd/steps';
 
 import { SharedModule } from '@shared/shared.module';
 import { LandsayLayoutsModule } from '@layouts/landsay/landsay.module';
@@ -7,9 +8,12 @@ import { LandingFaqComponent } from './faq/faq.component';
 import { LandingTermsComponent } from './terms/terms.component';
 import { LandingPrivacyComponent } from './privacy/privacy.component';
 import { LandingLoginComponent } from './login/login.component';
+import { LandingEnrollComponent } from './enroll/enroll.component';
 
 @NgModule({
-  imports: [
+  imports     : [
+    NzStepsModule,
+
     SharedModule,
     LandsayLayoutsModule
   ],
@@ -18,7 +22,8 @@ import { LandingLoginComponent } from './login/login.component';
     LandingFaqComponent,
     LandingTermsComponent,
     LandingPrivacyComponent,
-    LandingLoginComponent
+    LandingLoginComponent,
+    LandingEnrollComponent
   ],
   providers   : []
 })

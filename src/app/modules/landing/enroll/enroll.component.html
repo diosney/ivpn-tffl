@@ -1,0 +1,496 @@
+<section class="section" id="faq">
+  <div class="container">
+    <div class="row">
+      <div class=col-12>
+        <div class="p-5 bg-body-tertiary rounded-3 shadow">
+          <!--          <h3 class="text-dark-emphasis mb-0" translate>-->
+          <!--            Pending to define.-->
+          <!--          </h3>-->
+
+          <nz-steps [nzCurrent]="currentStep">
+            <nz-step [nzTitle]="'Account Information' | translate"></nz-step>
+            <nz-step [nzTitle]="'Verify' | translate"></nz-step>
+            <nz-step [nzTitle]="'Personal Information' | translate"></nz-step>
+            <nz-step [nzTitle]="'Confirmation' | translate"></nz-step>
+          </nz-steps>
+
+          <div class="steps-content">
+            <div *ngIf="currentStep === 0">
+              <form novalidate>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-control-container mb-3">
+                      <label for="step1Email" class="form-label" translate>Email</label>
+
+                      <input type="text"
+                             class="form-control"
+                             autofocus
+                             appDisableAutofill
+                             [placeholder]="'' | translate"
+                             id="step1Email"
+                             name="step1Email"
+                             [ngModel]="formStaticValues?.step1?.email ?? ''"
+                             [value]="formStaticValues?.step1?.email ?? ''">
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-control-container mb-3">
+                      <label for="step1Password" class="form-label" translate>Password</label>
+
+                      <input type="password"
+                             class="form-control"
+                             appDisableAutofill
+                             [placeholder]="'' | translate"
+                             id="step1Password"
+                             name="step1Password"
+                             [ngModel]="formStaticValues?.step1?.password ?? ''"
+                             [value]="formStaticValues?.step1?.password ?? ''">
+
+                      <div class="form-text" translate>
+                        8 Characters or longer. At least one number, an uppercase and a lowercase letter. Example:
+                        JohnDoe5 shows a minimum of 8 characters and number combination.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <div *ngIf="currentStep === 1">
+              <form novalidate>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="alert alert-warning"
+                         [innerHTML]="'We need to verify your account. A 6-digit code was sent to your <strong>email address.</strong>' | translate | safeHtml">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-control-container mb-3">
+                      <label for="step2Code" class="form-label" translate>6-digit Verification Code</label>
+
+                      <input type="text"
+                             class="form-control"
+                             autofocus
+                             appDisableAutofill
+                             [placeholder]="'' | translate"
+                             id="step2Code"
+                             name="step2Code"
+                             [ngModel]="formStaticValues?.step2?.code ?? ''"
+                             [value]="formStaticValues?.step2?.code ?? ''">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-12">
+                    <p class="p-text">
+                      <span class="text-muted" translate>Didn't get an email?</span>
+
+                      <a href="javascript: void(0);"
+                         class="text-primary" translate>
+
+                        Resend Code
+                      </a>
+                    </p>
+
+                    <p class="p-text">
+                      <span class="text-muted" translate>Made a mistake?</span>
+
+                      <a href="javascript: void(0);"
+                         class="text-primary" translate>
+
+                        Edit Email Address
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <div *ngIf="currentStep === 2">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="alert alert-warning"
+                       [innerHTML]="'Kindly provide your current information exactly as it appears on your driver’s license.' | translate | safeHtml">
+                  </div>
+                </div>
+              </div>
+
+              <form novalidate>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-control-container mb-3">
+                      <label for="step3FirstName" class="form-label" translate>First Name</label>
+
+                      <input type="text"
+                             class="form-control"
+                             autofocus
+                             appDisableAutofill
+                             [placeholder]="'' | translate"
+                             id="step3FirstName"
+                             name="step3FirstName"
+                             [ngModel]="formStaticValues?.step3?.firstName ?? ''"
+                             [value]="formStaticValues?.step3?.firstName ?? ''">
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-control-container mb-3">
+                      <label for="step3LastName" class="form-label" translate>Last Name</label>
+
+                      <input type="text"
+                             class="form-control"
+                             appDisableAutofill
+                             [placeholder]="'' | translate"
+                             id="step3LastName"
+                             name="step3LastName"
+                             [ngModel]="formStaticValues?.step3?.lastName ?? ''"
+                             [value]="formStaticValues?.step3?.lastName ?? ''">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-control-container mb-3">
+                      <label for="step3GenderFemale" class="form-label" translate>Gender</label>
+                      <br>
+
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input"
+                               type="radio"
+                               id="step3GenderFemale"
+                               name="step3Gender"
+                               value="female"
+                               [ngModel]="formStaticValues?.step3?.gender ?? ''">
+
+                        <label class="form-check-label" for="step3GenderFemale" translate>Female</label>
+                      </div>
+
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input"
+                               type="radio"
+                               id="step3GenderMale"
+                               name="step3Gender"
+                               value="male"
+                               [ngModel]="formStaticValues?.step3?.gender ?? ''">
+
+                        <label class="form-check-label" for="step3GenderMale" translate>Male</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-control-container mb-3">
+                      <label for="step3DobMonth" class="form-label" translate>Date Of Birth (Month/Day/Year)</label>
+
+                      <br>
+                      <div class="input-group">
+                        <select class="form-select"
+                                name="step3DobMonth"
+                                id="step3DobMonth"
+                                [ngModel]="formStaticValues?.step3?.dob?.month ?? ''"
+                                [value]="formStaticValues?.step3?.dob?.month ?? ''">
+
+                          <option value="" translate>Month</option>
+
+                          <option *ngFor="let month of months"
+                                  [value]="month">
+
+                            {{ month }}
+                          </option>
+                        </select>
+
+                        <select class="form-select"
+                                name="step3DobDay"
+                                id="step3DobDay"
+                                [ngModel]="formStaticValues?.step3?.dob?.day ?? ''"
+                                [value]="formStaticValues?.step3?.dob?.day ?? ''">
+
+                          <option value="" translate>Day</option>
+
+                          <option *ngFor="let day of days"
+                                  [value]="day">
+
+                            {{ day }}
+                          </option>
+                        </select>
+
+                        <select class="form-select"
+                                name="step3DobYear"
+                                id="step3DobYear"
+                                [ngModel]="formStaticValues?.step3?.dob?.year ?? ''"
+                                [value]="formStaticValues?.step3?.dob?.year ?? ''">
+
+                          <option value="" translate>Year</option>
+
+                          <option *ngFor="let year of years"
+                                  [value]="year">
+
+                            {{ year }}
+                          </option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-control-container mb-3">
+                      <label for="step3Pin" class="form-label" translate>4-digit PIN</label>
+
+                      <input type="text"
+                             class="form-control"
+                             appDisableAutofill
+                             [placeholder]="'' | translate"
+                             id="step3Pin"
+                             name="step3Pin"
+                             [ngModel]="formStaticValues?.step3?.pin ?? ''"
+                             [value]="formStaticValues?.step3?.pin ?? ''">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-control-container mb-3">
+                      <label for="step3AddressStreet" class="form-label" translate>Address</label>
+
+                      <input type="text"
+                             class="form-control"
+                             appDisableAutofill
+                             [placeholder]="'' | translate"
+                             id="step3AddressStreet"
+                             name="step3AddressStreet"
+                             [ngModel]="formStaticValues?.step3?.address?.address1 ?? ''"
+                             [value]="formStaticValues?.step3?.address?.address1 ?? ''">
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-control-container mb-3">
+                      <label for="step3AddressCity" class="form-label" translate>City</label>
+
+                      <input type="text"
+                             class="form-control"
+                             appDisableAutofill
+                             [placeholder]="'' | translate"
+                             id="step3AddressCity"
+                             name="step3AddressCity"
+                             [ngModel]="formStaticValues?.step3?.address?.city ?? ''"
+                             [value]="formStaticValues?.step3?.address?.city ?? ''">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-control-container mb-3">
+                      <label for="step3AddressAddress2" class="form-label" translate>Apt/Suite/Unit</label>
+
+                      <input type="text"
+                             class="form-control"
+                             appDisableAutofill
+                             [placeholder]="'' | translate"
+                             id="step3Address2Street"
+                             name="step3Address2Street"
+                             [ngModel]="formStaticValues?.step3?.address?.address2 ?? ''"
+                             [value]="formStaticValues?.step3?.address?.address2 ?? ''">
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-control-container mb-3">
+                      <label for="step3AddressZip" class="form-label" translate>ZIP Code</label>
+
+                      <input type="text"
+                             class="form-control"
+                             appDisableAutofill
+                             [placeholder]="'' | translate"
+                             id="step3AddressZip"
+                             name="step3AddressZip"
+                             [ngModel]="formStaticValues?.step3?.address?.zipcode ?? ''"
+                             [value]="formStaticValues?.step3?.address?.zipcode ?? ''">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-control-container mb-3">
+                      <label for="step3AddressState" class="form-label" translate>State</label>
+
+                      <select class="form-select"
+                              name="step3AddressState"
+                              id="step3AddressState"
+                              [ngModel]="formStaticValues?.step3?.address?.state ?? ''"
+                              [value]="formStaticValues?.step3?.address?.state ?? ''">
+
+                        <option value="" translate>None</option>
+
+                        <option *ngFor="let state of USA_STATES"
+                                [value]="state.id">
+
+                          {{ state.text }}
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-12">
+                    <p class="inter-form-text">
+                      <span class="text-muted" translate>
+                        Your personal information above must match the information found on your driver license.
+                      </span>
+                    </p>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-control-container mb-3">
+                      <label for="step3DriverLicense" class="form-label" translate>Driver License</label>
+
+                      <input type="text"
+                             class="form-control"
+                             appDisableAutofill
+                             [placeholder]="'' | translate"
+                             id="step3DriverLicense"
+                             name="step3DriverLicense"
+                             [ngModel]="formStaticValues?.step3?.driverLicense ?? ''"
+                             [value]="formStaticValues?.step3?.driverLicense ?? ''">
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-control-container mb-3">
+                      <label for="step3DriverLicenseState" class="form-label" translate>Issuing State</label>
+
+                      <select class="form-select"
+                              name="step3DriverLicenseState"
+                              id="step3DriverLicenseState"
+                              [ngModel]="formStaticValues?.step3?.driverLicenseState ?? ''"
+                              [value]="formStaticValues?.step3?.driverLicenseState ?? ''">
+
+                        <option value="" translate>None</option>
+
+                        <option *ngFor="let state of USA_STATES"
+                                [value]="state.id">
+
+                          {{ state.text }}
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-control-container mb-3">
+                      <label for="step3Ssn" class="form-label" translate>SSN (Last 4 numbers of SSN)</label>
+
+                      <input type="text"
+                             class="form-control"
+                             appDisableAutofill
+                             [placeholder]="'' | translate"
+                             id="step3Ssn"
+                             name="step3Ssn"
+                             [ngModel]="formStaticValues?.step3?.ssn ?? ''"
+                             [value]="formStaticValues?.step3?.ssn ?? ''">
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-control-container mb-3">
+                      <label for="step3Phone" class="form-label" translate>Mobile Number</label>
+
+                      <input type="text"
+                             class="form-control"
+                             appDisableAutofill
+                             [placeholder]="'' | translate"
+                             id="step3Phone"
+                             name="step3Phone"
+                             [ngModel]="formStaticValues?.step3?.phone ?? ''"
+                             [value]="formStaticValues?.step3?.phone ?? ''">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-check agree-to-conditions-container">
+                      <input class="form-check-input"
+                             type="checkbox"
+                             value=""
+                             id="step3agreeToConditions"
+                             name="step3agreeToConditions"
+                             [ngModel]="formStaticValues?.step3?.agreeToConditions ?? ''">
+
+                      <label class="form-check-label" for="step3agreeToConditions" [innerHTML]="'I certify that I am at least 18, the information I have provided is accurate, and I have reviewed and agree to all <a href=\'javascript: void(0);\'>Terms and Conditions</a>.' | translate | safeHtml">
+
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <div *ngIf="currentStep === 3">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="alert alert-success" translate>
+                      Your submission is complete!
+                  </div>
+                </div>
+              </div>
+
+              <h3 translate>
+                Thank You For Your Application!
+              </h3>
+
+              <p translate>
+                We'll be in touch with a decision shortly.
+              </p>
+            </div>
+          </div>
+
+          <div class="steps-action d-flex justify-content-between align-items-center">
+            <a href="javascript: void(0);">
+              <span translate>Already have an account? Sign In!</span>
+            </a>
+
+            <div>
+              <button *ngIf="currentStep > 0"
+                      class="btn btn-outline-primary"
+                      (click)="prev()">
+
+                <span translate>Previous</span>
+              </button>
+
+              <button *ngIf="currentStep < 3"
+                      class="btn btn-secondary"
+                      (click)="next()">
+
+                <span translate>Next</span>
+              </button>
+
+              <button *ngIf="currentStep === 3"
+                      class="btn btn-secondary"
+                      (click)="finish()">
+
+                <span translate>Finish</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

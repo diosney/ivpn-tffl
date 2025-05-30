@@ -1,0 +1,45 @@
+.steps-content {
+  padding-top : 3rem;
+}
+
+.steps-action {
+  margin-top : 3rem;
+
+  button + button,
+  .btn + .btn {
+    margin-left : 1rem;
+  }
+}
+
+form {
+  div {
+    text-align : left;
+  }
+
+  label:not(.form-check-label) {
+    font-weight : bold;
+  }
+}
+
+.form-control-container {
+  //text-align : left;
+}
+
+.p-text {
+  margin-bottom : .5rem;
+}
+
+.alert {
+  margin-bottom : 2rem;
+  text-align    : left;
+}
+
+.inter-form-text {
+  margin-top    : 2rem;
+  margin-bottom : 2.5rem;
+}
+
+.agree-to-conditions-container {
+  margin-top    : 2rem;
+  margin-bottom : 2.5rem;
+}

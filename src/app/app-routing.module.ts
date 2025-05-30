@@ -16,6 +16,7 @@ import { LandingFaqComponent } from './modules/landing/faq/faq.component';
 import { LandingHomeComponent } from './modules/landing/home/home.component';
 import { environment } from '../environments/environment';
 import { SettingsBySubdomainResolve } from '@core/resolves/settings-by-subdomain-resolve.service';
+import { LandingEnrollComponent } from './modules/landing/enroll/enroll.component';
 
 const routes: Routes = [
   {
@@ -52,6 +53,13 @@ const routes: Routes = [
         component: LandingPrivacyComponent,
         data     : {
           pageTitle: _t('Privacy Policy')
+        }
+      },
+      {
+        path     : 'enroll',
+        component: LandingEnrollComponent,
+        data     : {
+          pageTitle: _t('Account Registration')
         }
       },
       {
