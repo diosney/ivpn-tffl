@@ -6,6 +6,7 @@ import {
 import { SettingsService } from '@core/settings.service';
 import { USA_STATES } from '@core/models/constants/usa';
 import { Router } from '@angular/router';
+import { BreakpointObserver } from '@angular/cdk/layout';
 
 const Steps = {
   AccountInfo : 0,
@@ -36,8 +37,11 @@ export class LandingEnrollComponent implements OnInit,
   days             = Array.from({ length: 31 }, (_, i) => i + 1);
   years            = Array.from({ length: 20 }, (_, i) => 1990 - i);
 
+  isSmallScreen = this.breakpointObserver.isMatched('(max-width: 920px)');
+
   constructor(private settingsService: SettingsService,
-              private router: Router) {
+              private router: Router,
+              private breakpointObserver: BreakpointObserver) {
   }
 
   ngOnInit() {

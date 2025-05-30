@@ -3,7 +3,10 @@
     <div class="row">
       <div class=col-12>
         <div class="p-5 bg-body-tertiary rounded-3 shadow">
-          <nz-steps [nzCurrent]="currentStep" [nzLabelPlacement]="'vertical'">
+          <nz-steps [nzCurrent]="currentStep"
+                    [nzDirection]="(isSmallScreen)? 'vertical' : 'horizontal'"
+                    [nzLabelPlacement]="'vertical'">
+
             <nz-step [nzTitle]="'Account Information' | translate"></nz-step>
             <nz-step [nzTitle]="'Verify' | translate"></nz-step>
             <nz-step [nzTitle]="'Personal Information' | translate"></nz-step>
@@ -426,7 +429,8 @@
                              name="step3agreeToConditions"
                              [ngModel]="formStaticValues?.step3?.agreeToConditions ?? ''">
 
-                      <label class="form-check-label" for="step3agreeToConditions" [innerHTML]="'I certify that I am at least 18, the information I have provided is accurate, and I have reviewed and agree to all <a href=\'javascript: void(0);\'>Terms and Conditions</a>.' | translate | safeHtml">
+                      <label class="form-check-label" for="step3agreeToConditions"
+                             [innerHTML]="'I certify that I am at least 18, the information I have provided is accurate, and I have reviewed and agree to all <a href=\'javascript: void(0);\'>Terms and Conditions</a>.' | translate | safeHtml">
 
                       </label>
                     </div>
@@ -439,7 +443,7 @@
               <div class="row">
                 <div class="col-md-12">
                   <div class="alert alert-success" translate>
-                      Your submission is complete!
+                    Your submission is complete!
                   </div>
                 </div>
               </div>
