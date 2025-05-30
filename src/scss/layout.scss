@@ -5,15 +5,18 @@ body {
 
   display         : flex;
   height          : 100vh;
+  max-width       : 100vw;
 
   app-root {
     display : flex;
     flex    : 1;
+    max-width       : 100vw;
 
     app-landsay-landing-layout {
       display        : flex;
       flex           : 1;
       flex-direction : column;
+      max-width       : 100vw;
 
       app-landing-home,
       app-landing-faq,
