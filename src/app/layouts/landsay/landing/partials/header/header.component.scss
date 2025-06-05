@@ -1,7 +1,9 @@
 @media (max-width : 991px) {
   .navbar, .navbar.nav-sticky {
-    background-color : rgb(247 248 255 / 72%) !important;
-    padding          : 0 !important;
+    background-color      : rgba(255, 255, 255, 0.5) !important;
+    background-blend-mode : overlay;
+    //background-color : rgb(247 248 255 / 72%) !important;
+    padding               : 0 !important;
 
     > .container {
       //background-color : rgba(255, 255, 255, 0.5);
@@ -26,12 +28,12 @@
   //background-blend-mode : soft-light;
   //background-blend-mode : overlay;
 
-  background-image: url('/assets/images/stars2.png');
-  background-repeat: repeat;
-  background-size: 140px 100px;
-  background-color: #002868;
+  background-image  : url('/assets/images/bg-stars.png');
+  background-repeat : repeat;
+  background-size   : 140px 100px;
+  background-color  : #002868;
 
-  border                : 0.2cm solid #b71c1c;
+  border            : 0.2cm solid #b71c1c;
 
   @media ((min-width : 992px)) {
     //background-color : rgba(255, 255, 255, 0.5);
