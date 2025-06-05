@@ -94,7 +94,7 @@ export const ivpnSettings: MerchantSettings = {
       appWidgetPriceCircleMidTextColor   : '#bf0a30',
 
       appFooterBackgroundColor: '',
-      appFooterColor          : '#114ea3',
+      appFooterColor          : '#ffffff',
       appFooterHoverColor     : '#bf0a30'
     }
   },
