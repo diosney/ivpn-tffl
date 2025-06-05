@@ -59,7 +59,7 @@ export const ivpnSettings: MerchantSettings = {
       appFormControlFocusBorderColor: '#114ea3',
 
       appHeaderLogoUrl        : '/assets/images/merchants/ivpn/logo-landing.png',
-      appHeaderLinkColor      : '#bf0a30',
+      appHeaderLinkColor      : '#114ea3',
       appHeaderLinkHoverColor : '#bf0a30',
       appHeaderLinkActiveColor: '#bf0a30',
 

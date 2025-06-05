@@ -51,12 +51,15 @@
   padding-bottom : .3rem;
 }
 
-.navbar .navbar-nav .nav-item > .nav-link {
-  font-weight : 900;
-}
 
 .navbar .navbar-nav .nav-item > .nav-link {
-  font-size : 16px;
+  color       : #114ea3;
+  font-size   : 16px;
+  font-weight : 900;
+
+  &:hover, &.active {
+    color : #bf0a30
+  }
 }
 
 .navbar-brand {
