@@ -1,6 +1,9 @@
 body {
   animation       : gradientAnimation 15s ease infinite;
-  background      : linear-gradient(120deg, #002868, #FFFFFF, #ae0026);
+  background: linear-gradient(120deg, #0033A0 0%, #0033A0 25%, #fff0f0 50%, #BF0A30 70%, #BF0A30 100%);
+
+  //background      : linear-gradient(120deg, #FFFFFF,  #002868,#ae0026);
+  //background      : linear-gradient(120deg, #002868, #FFFFFF, #ae0026);
   background-size : 300% 300%;
 
   display         : flex;

@@ -20,9 +20,11 @@
 }
 
 .navbar {
-  background            : url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 100 100"><polygon points="50,5 61,35 95,35 67,57 76,91 50,72 24,91 33,57 5,35 39,35" fill="white"/></svg>') repeat, linear-gradient(to right, #0d47a1, #1976d2);
-  background-size       : 20px 20px, cover;
-  background-blend-mode : overlay;
+  background            : url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 100 100"><polygon points="50,5 61,35 95,35 67,57 76,91 50,72 24,91 33,57 5,35 39,35" fill="white"/></svg>') space, linear-gradient(to right, #0d47a1, #2b79ca);
+  //background            : url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 100 100"><polygon points="50,5 61,35 95,35 67,57 76,91 50,72 24,91 33,57 5,35 39,35" fill="white"/></svg>') space, linear-gradient(to right, #0d47a1, #1976d2);
+  background-size       : 25px 25px, cover;
+  background-blend-mode : soft-light;
+  //background-blend-mode : overlay;
   border                : 0.2cm solid #b71c1c;
 
   @media ((min-width : 992px)) {
@@ -36,22 +38,31 @@
   }
 }
 
+.navbar > div {
+  padding-top    : .3rem;
+  padding-bottom : .3rem;
+}
+
+.navbar .navbar-nav .nav-item > .nav-link {
+  font-size : 16px;
+}
+
 .navbar-brand {
   line-height : inherit !important;
   text-align  : center;
 
   img {
-    max-height : 2.5rem;
+    max-height : 5.5rem;
     //  margin-top : .2rem;
   }
 
   span {
     //color          : white;
     display        : block;
-    font-size      : .55rem;
+    font-size      : 0.7rem;
+    line-height    : .9rem;
     font-style     : italic;
     font-weight    : normal;
-    line-height    : .7rem;
     letter-spacing : .02rem;
     margin-top     : .3rem;
     text-align     : center;
