@@ -83,8 +83,7 @@ app-landsay-widget-safe-simple-secure {
 }
 
 .card-heading {
-  background              : linear-gradient(#f3f3f3, #c1c1c1);
-  //background              : linear-gradient(0deg, #0033A0 0%, #0033A0 15%, #BF0A30 75%, #BF0A30 100%);
+  background              : linear-gradient(-120deg, #0033A0 0%, #0033A0 10%, #fff0f0 50%, #BF0A30 85%, #BF0A30 100%);
   border-top-left-radius  : var(--bs-border-radius-lg) !important;
   border-top-right-radius : var(--bs-border-radius-lg) !important;
   margin-bottom           : 0 !important;
