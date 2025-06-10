@@ -1,6 +1,6 @@
 @media (max-width : 991px) {
   .navbar, .navbar.nav-sticky {
-    background-color      : rgba(255, 255, 255, 0.5) !important;
+    background-color      : #8ba7d0 !important;
     background-blend-mode : overlay;
     //background-color : rgb(247 248 255 / 72%) !important;
     padding               : 0 !important;
@@ -16,7 +16,7 @@
 @media (min-width : 992px) {
   .navbar, .navbar.nav-sticky {
     > .container {
-      background-color : rgba(255, 255, 255, 0.5);
+      background-color : #8ba7d0;
     }
   }
 }

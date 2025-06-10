@@ -81,3 +81,17 @@ app-landsay-widget-safe-simple-secure {
     display : none !important;
   }
 }
+
+.card-heading {
+  background              : linear-gradient(#f3f3f3, #c1c1c1);
+  //background              : linear-gradient(0deg, #0033A0 0%, #0033A0 15%, #BF0A30 75%, #BF0A30 100%);
+  border-top-left-radius  : var(--bs-border-radius-lg) !important;
+  border-top-right-radius : var(--bs-border-radius-lg) !important;
+  margin-bottom           : 0;
+  padding-top             : 1.5rem !important;
+  padding-bottom          : 1.5rem !important;
+
+  > h4 {
+    margin-bottom : 0 !important;
+  }
+}
