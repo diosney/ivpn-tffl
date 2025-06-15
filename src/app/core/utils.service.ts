@@ -5,12 +5,9 @@ import {
 
 import { AbstractControl } from '@angular/forms';
 import { Router } from '@angular/router';
-import { ClrDatagridStateInterface } from '@clr/angular';
 import { Decimal } from 'decimal.js';
-import isEqualWith from 'lodash.isequalwith';
-import isEqual from 'lodash.isequal';
-import mergeWith from 'lodash.mergewith';
 import * as moment from 'moment';
+import { ViewportScroller } from '@angular/common';
 
 @Injectable()
 export class UtilsService {
@@ -102,7 +99,31 @@ export class UtilsService {
       .join('');
   }
 
-  constructor(private router: Router) {
+  static maskCardNumberMiddleChars(input: string, maskingChar = '*'): string {
+    const start        = input.slice(0, 4);
+    const end          = input.slice(-4);
+    const maskedLength = input.length - 8;
+    const masked       = maskingChar.repeat(maskedLength);
+
+    return `${start}${masked}${end}`;
+  }
+
+  static jsonStringifyAndEncode(input: any): string {
+    const json = JSON.stringify(input);
+    return btoa(json);
+  }
+
+  static jsonParseAndDecode(input: string): any {
+    const decoded = atob(input);
+    return JSON.parse(decoded);
+  }
+
+  static clone(input: any): any {
+    return JSON.parse(JSON.stringify(input));
+  }
+
+  constructor(private router: Router,
+              private viewportScroller: ViewportScroller) {
   }
 
   goTo($event: MouseEvent, route: any) {
@@ -130,26 +151,16 @@ export class UtilsService {
     return sum.toFixed(2);
   }
 
-  static maskCardNumberMiddleChars(input: string, maskingChar = '*'): string {
-    const start        = input.slice(0, 4);
-    const end          = input.slice(-4);
-    const maskedLength = input.length - 8;
-    const masked       = maskingChar.repeat(maskedLength);
+  scrollToSectionById(id: string) {
+    const header          = document.getElementById('navbar');
+    const element         = document.getElementById(id);
+    const headerOffset    = header?.clientHeight;
+    const elementPosition = element?.getBoundingClientRect().top ?? 0;
+    const offsetPosition  = elementPosition + window.scrollY - headerOffset!;
 
-    return `${start}${masked}${end}`;
-  }
-
-  static jsonStringifyAndEncode(input: any): string {
-    const json = JSON.stringify(input);
-    return btoa(json);
-  }
-
-  static jsonParseAndDecode(input: string): any {
-    const decoded = atob(input);
-    return JSON.parse(decoded);
-  }
-
-  static clone(input: any): any {
-    return JSON.parse(JSON.stringify(input));
+    window.scrollTo({
+      top     : offsetPosition,
+      behavior: 'smooth'
+    });
   }
 }

@@ -10,7 +10,7 @@ export const ivpnSettings: MerchantSettings = {
       bsSecondary: '#114ea3',
 
       bsLinkColorRgb     : '17, 78, 163',
-      bsLinkHoverColorRgb: '68, 116, 182',
+      bsLinkHoverColorRgb: '204, 64, 94',
 
       appListIconColor: '#114ea3',
 

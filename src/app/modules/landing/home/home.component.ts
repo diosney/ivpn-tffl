@@ -1,9 +1,10 @@
 import {
   Component,
   OnDestroy,
-  OnInit,
+  OnInit
 } from '@angular/core';
 import { SettingsService } from '@core/settings.service';
+import { UtilsService } from '@core/utils.service';
 
 @Component({
   selector   : 'app-landing-home',
@@ -16,7 +17,8 @@ export class LandingHomeComponent implements OnInit,
 
   private allowSubscriptions = true;
 
-  constructor(public settingsService: SettingsService) {
+  constructor(public utilsService: UtilsService,
+              public settingsService: SettingsService) {
   }
 
   ngOnInit() {
