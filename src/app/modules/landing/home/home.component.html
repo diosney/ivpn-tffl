@@ -2,7 +2,7 @@
   <div id="home" class="container">
     <div class="card-container text-center bg-body-tertiary rounded-3 shadow">
       <div class="card-heading pt-5 my-5" translate>
-        <ul class="slogan-list">
+        <ul class="slogan-list list-to-left">
           <li>
             <h4>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="24" height="24" fill="currentColor">
@@ -84,18 +84,18 @@
         <ul class="slogan-list">
           <li>
             <div>
-              <p>
-                <em translate>No picking numbers.</em>
+              <h4>
+                <strong><em translate>No picking numbers.</em></strong>
                 <br>
-                <em translate>No scratching tickets.</em>
-              </p>
+                <strong><em translate>No scratching tickets.</em></strong>
+              </h4>
             </div>
           </li>
         </ul>
       </div>
 
       <div class="section section-2 dark-background-section">
-        <ul class="slogan-list">
+        <ul class="slogan-list list-to-left">
           <li>
             <h4 class="fw-bold">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="24" height="24" fill="currentColor">
@@ -127,7 +127,7 @@
                 <polygon points="50,5 61,35 95,35 67,57 76,91 50,72 24,91 33,57 5,35 39,35"/>
               </svg>
 
-              <span translate>Each entry for the drawing is $10 with a maximum of 5 entries per game.</span>
+              <span translate>Each entry for the drawing is $10 with a maximum of 5 entries per game</span>
             </h4>
           </li>
 
@@ -137,15 +137,14 @@
                 <polygon points="50,5 61,35 95,35 67,57 76,91 50,72 24,91 33,57 5,35 39,35"/>
               </svg>
 
+              <span translate>It’s quick, easy and FREE</span>
+
               <a href="javascript: void(0);"
                  (click)="utilsService.scrollToSectionById('how-it-works')"
-                 class="btn btn-primary mt-4 top-apply-button">
+                 class="btn btn-primary mt-4 top-apply-button stop-paying-taxes-button">
 
                 <span translate>Learn More</span>
               </a>
-
-              <span class="blue-dots">....</span>
-              <span translate>it’s quick, easy and FREE</span>
             </h4>
           </li>
 
@@ -175,9 +174,10 @@
           Here’s How It Works
         </h2>
 
-        <p translate>
-          To register for Tax-Free For Life, you must be a United States resident, 18 years of age or older, with a
-          state driver’s license or government ID number.
+        <p class="left-aligned-p" translate>
+          To register for Tax-Free For Life, you must be a United States resident, 18 years of age or older,
+          <br>
+          with a state driver’s license or government ID number.
         </p>
 
         <ul class="slogan-list">
@@ -192,14 +192,14 @@
 
             <p>
               <strong translate>When you register for the official U.S. Government Lottery — available in all 50 states
-                — you’ll be issued a unique "Tax-Free for Life" Identification Number.</strong>
+                — you’ll be issued
+                <br>
+                a unique "Tax-Free for Life" Identification Number.</strong>
             </p>
 
-            <p translate>
-              This identifier serves as your permanent credential.
-              <br>
-              Securely connecting you to all future lottery entries
-              and drawings.
+            <p class="left-aligned-p" translate>
+              This identifier will serve as your permanent credential, providing secure access to all upcoming lottery
+              entries and drawings.
             </p>
           </li>
 
@@ -212,13 +212,17 @@
               <span translate>What are your odds…. to Stop Paying Taxes.</span>
             </h4>
 
-            <p translate>
-              Your odds of winning each week is based on the number of people in the state that your driver's license or
-              state ID is issued. Your odds of winning is not based on the nationwide number of players.
+            <p class="left-aligned-p">
+              <strong translate>
+                Your odds of winning each week are determined by the number of participants in the state
+                where your driver's license or state ID was issued. They are not based on the total number of players
+                nationwide.
+              </strong>
             </p>
 
             <p>
-              <span><em translate>Every time you play you’re a winner because you are making Social Security securer for everyone.</em></span>
+              <span><em translate>Every time you play, you’re contributing to a stronger Social Security system for
+                all.</em></span>
             </p>
           </li>
 
@@ -231,63 +235,23 @@
               <span translate>Drawing and Selection.</span>
             </h4>
 
-            <div>
-              <p>
-                <strong translate>Each Sunday and Thursday, a drawing is held in evey state.</strong>
+            <div class="w-100">
+              <p class="left-aligned-p">
+                <strong translate>A drawing is held in every state each Sunday and Thursday.</strong>
               </p>
 
-              <p>
+              <p class="left-aligned-p">
                 <strong translate>
-                  One Tax-Free ID is selected per state. If it’s yours — you win.
+                  One Tax-Free ID is picked in every state. If it’s yours, congratulations—you win!
                 </strong>
               </p>
 
-              <p>
-                <strong translate>That’s it. No guesswork. No gimmicks. Just your ID, your state, your chance.</strong>
+              <p class="left-aligned-p">
+                <strong translate>No puzzles, no hoops to jump through. Just your ID and your opportunity.</strong>
               </p>
             </div>
           </li>
         </ul>
-
-        <a href="javascript: void(0);"
-           class="btn btn-primary mt-4 top-apply-button"
-           [routerLink]="'/enroll'">
-
-          <span translate>Register Now</span>
-        </a>
-      </div>
-
-      <div id="your-odds" class="section section-4 dark-background-section">
-        <h2 translate>
-          Your Odds? Better Than You Think.
-        </h2>
-
-        <p>
-          <strong translate>Your entry for each game is entered into the state where your driver's license or government
-            ID is issued.</strong>
-        </p>
-
-        <p>
-          <span translate>That means you’re only competing against others in your state —
-          </span>&nbsp;<strong translate>not the whole country.</strong>
-        </p>
-
-        <p translate>
-          100 Winners in your state each week — Those 100 people will never pay Federal Income Tax again or get a Tax
-          Refund for what you paid for the last 10 years.
-        </p>
-
-        <p translate>
-          Every entry you make does more than give you a shot at freedom from taxes. It helps <strong>fund the Social
-          Security
-          Trust Fund</strong>&nbsp;— strengthening benefits for millions of Americans, including you.
-        </p>
-
-        <p translate>
-          So go ahead.
-          <br>
-          <strong>Play for your future. Play for everyone's.</strong>
-        </p>
 
         <a href="javascript: void(0);"
            class="btn btn-primary mt-4 top-apply-button"

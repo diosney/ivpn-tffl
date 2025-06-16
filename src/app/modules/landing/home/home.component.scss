@@ -215,8 +215,7 @@ ul li {
   margin-right : .5rem;
 }
 
-#how-it-works,
-#your-odds {
+#how-it-works {
   h2 + p {
     margin-bottom : 4rem;
   }
@@ -251,8 +250,7 @@ ul li {
   }
 }
 
-#how-it-works,
-#your-odds {
+#how-it-works {
   h2 {
     font-weight   : bold;
     margin-bottom : 2.5rem;
@@ -261,35 +259,6 @@ ul li {
   p {
     font-size     : 1.2rem;
     margin-bottom : 3rem;
-  }
-}
-
-#your-odds {
-  border-bottom-left-radius  : var(--bs-border-radius-lg) !important;
-  border-bottom-right-radius : var(--bs-border-radius-lg) !important;
-
-  strong {
-    color     : #e21111;
-    font-size : 1.4rem;
-  }
-
-  .tffl-isnt-another-game {
-    flex-wrap     : wrap;
-    margin-bottom : 0;
-
-    h4 {
-      color      : #e21111;
-      flex-basis : 100%;
-      width      : 100%;
-    }
-
-    div {
-      width : 100%;
-    }
-  }
-
-  .btn {
-    margin-bottom : 2rem;
   }
 }
 
@@ -343,8 +312,7 @@ ul li {
     }
   }
 
-  #how-it-works,
-  #your-odds {
+  #how-it-works {
     li {
       margin-bottom : 2rem;
     }
@@ -387,5 +355,27 @@ ul li {
         margin-bottom : 0;
       }
     }
+  }
+
+  em, strong {
+    color : black !important;
+  }
+}
+
+.list-to-left {
+  li {
+    justify-content : start;
+  }
+}
+
+.left-aligned-p {
+  margin-left : 1rem;
+  text-align  : left;
+  width       : 100%;
+}
+
+.slogan-list {
+  .left-aligned-p {
+    margin-left : 0 !important;
   }
 }
