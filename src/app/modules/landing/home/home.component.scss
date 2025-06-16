@@ -354,3 +354,17 @@ ul li {
 .stop-paying-taxes-button {
   margin-left : 1rem;
 }
+
+#tax-free-for-life-no-picking-numbers {
+  ul {
+    margin-bottom : 0;
+
+    li {
+      font-size : 1.4rem;
+
+      &:last-of-type {
+        margin-bottom : 0;
+      }
+    }
+  }
+}
