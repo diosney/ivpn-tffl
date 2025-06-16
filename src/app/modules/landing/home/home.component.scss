@@ -349,6 +349,27 @@ ul li {
       margin-bottom : 2rem;
     }
   }
+
+  #tax-free-for-life {
+    h4 div {
+      margin-bottom : 1rem;
+      text-align    : center;
+
+      &:last-of-type {
+        margin-bottom : 0;
+      }
+    }
+  }
+
+  #tax-free-for-life-no-picking-numbers {
+    li > div {
+      width : 100%;
+
+      p {
+        text-align : center;
+      }
+    }
+  }
 }
 
 .stop-paying-taxes-button {
