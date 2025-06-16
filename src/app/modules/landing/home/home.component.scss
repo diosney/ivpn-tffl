@@ -89,8 +89,28 @@ app-landsay-widget-safe-simple-secure {
   margin-bottom           : 0 !important;
   padding                 : 1.5rem 1rem !important;
 
+  .slogan-list {
+    padding: 0 .5rem;
+  }
+
   > h4 {
     margin-bottom : 0 !important;
+
+    span {
+      font-weight : bold !important;
+    }
+  }
+
+  li {
+    h4 {
+      span {
+        display : inline !important;
+      }
+
+      .main-text {
+        font-weight : bold;
+      }
+    }
   }
 }
 
@@ -363,6 +383,8 @@ ul li {
 }
 
 .list-to-left {
+  text-align : left;
+
   li {
     justify-content : start;
   }
@@ -377,5 +399,35 @@ ul li {
 .slogan-list {
   .left-aligned-p {
     margin-left : 0 !important;
+  }
+}
+
+.btn-rounded-primary {
+  background     : var(--app-btn-primary-background);
+  border-color   : var(--app-btn-primary-border-color) !important;
+  border-radius  : 30px;
+  font-size      : 13px;
+  outline        : none;
+  min-width      : 9rem !important;
+  padding        : 9px 25px;
+  text-transform : uppercase;
+
+  &:hover {
+    color : white;
+  }
+}
+
+.btn-rounded-secondary {
+  background     : var(--app-btn-secondary-background);
+  border-color   : var(--app-btn-secondary-border-color) !important;
+  border-radius  : 30px;
+  font-size      : 13px;
+  outline        : none;
+  min-width      : 9rem !important;
+  padding        : 9px 25px;
+  text-transform : uppercase;
+
+  &:hover {
+    color : white;
   }
 }
