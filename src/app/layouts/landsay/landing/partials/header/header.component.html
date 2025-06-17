@@ -99,8 +99,7 @@
              [routerLink]="'/enroll'"
              (click)="closeMenu()">
 
-            <span>
-              {{ 'Enroll&nbsp;&nbsp;&nbsp;Now' | translate }}
+            <span [innerHTML]="'Enroll&nbsp;&nbsp;&nbsp;Now'| translate | safeHtml">
             </span>
           </a>
         </li>
@@ -109,9 +108,8 @@
           <a href="javascript:void(0);"
              type="button"
              class="btn btn-primary"
-             (click)="closeMenu()">
-
-            {{'Play&nbsp;&nbsp;&nbsp;Now'| translate}}
+             (click)="closeMenu()"
+             [innerHTML]="'Play&nbsp;&nbsp;&nbsp;Now'| translate | safeHtml">
           </a>
         </li>
       </ul>
