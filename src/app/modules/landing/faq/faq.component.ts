@@ -3,6 +3,7 @@ import {
   OnDestroy,
   OnInit
 } from '@angular/core';
+import { SettingsService } from '@core/settings.service';
 
 @Component({
   selector   : 'app-landing-faq',
@@ -15,7 +16,7 @@ export class LandingFaqComponent implements OnInit,
 
   private allowSubscriptions = true;
 
-  constructor() {
+  constructor(public merchantSettingsService: SettingsService) {
   }
 
   ngOnInit() {

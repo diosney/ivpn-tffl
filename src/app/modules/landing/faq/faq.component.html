@@ -3,9 +3,305 @@
     <div class="row">
       <div class=col-12>
         <div class="p-5 text-center bg-body-tertiary rounded-3 shadow">
-          <h3 class="text-dark-emphasis mb-0" translate>
-            Pending to define.
-          </h3>
+          <div class="text-center mb-5 pb-2">
+            <h3 translate>How can we help you?</h3>
+
+            <p class="text-dark-emphasis mt-2" translate>
+              Last Modified: June 18, 2025
+            </p>
+          </div>
+
+          <accordion>
+            <accordion-group #accordionGroup1>
+              <button accordion-heading
+                      type="button">
+
+                <span translate>
+                  What is Tax-Fee For Life
+                </span>
+
+                <app-landsay-page-accordion-indicator-icon
+                  [accordionRef]="accordionGroup1"></app-landsay-page-accordion-indicator-icon>
+              </button>
+
+              <div>
+                <p translate>
+                  Tax-Free For Life is a federally administered, weekly digital lottery created to support the Social
+                  Security Trust Fund (SSTF) through a voluntary and innovative revenue stream—without raising payroll
+                  or income taxes.
+                </p>
+
+                <p translate>
+                  Unlike traditional lotteries, Tax-Free For Life offers a groundbreaking prize: a lifetime exemption
+                  from federal income tax, or alternatively, a refund of the past ten years of federal taxes paid. This
+                  once-in-a-lifetime reward transforms how Americans think about lotteries—by linking the thrill of
+                  winning to a meaningful national cause.
+                </p>
+
+                <p translate>
+                  How It Works:
+                </p>
+
+                <ul>
+                  <li translate>Participants enter a weekly digital lottery.</li>
+
+                  <li>
+                    <span translate>Winners receive either:</span>
+
+                    <ul>
+                      <li translate>Permanent exemption from paying federal income tax, or</li>
+
+                      <li translate>A lump-sum refund equal-to the federal taxes paid over the past 10 years.</li>
+                    </ul>
+                  </li>
+
+                  <li translate>All proceeds go directly toward strengthening the Social Security Trust Fund.</li>
+                </ul>
+
+                <p translate>
+                  Why It Matters:
+                </p>
+
+                <ul>
+                  <li translate>Strengthens Social Security: Offers a new funding source without burdening taxpayers.
+                  </li>
+
+                  <li translate>Voluntary Participation: Unlike tax hikes, it’s entirely optional.</li>
+
+                  <li translate>Public Engagement: Leverages Americans' enthusiasm for lotteries to solve a national
+                    challenge.
+                  </li>
+
+                  <li translate>Digital-First: Secure, accessible participation via modern digital platforms.</li>
+                </ul>
+
+                <p translate>
+                  Tax-Free For Life is where personal reward meets patriotic purpose—giving Americans a chance to change
+                  their lives and support the nation’s financial future at the same time.
+                </p>
+              </div>
+            </accordion-group>
+
+            <accordion-group #accordionGroup2>
+              <button accordion-heading
+                      type="button">
+
+                <span translate>
+                  Who is iVertical Payment Network (iVPN)?
+                </span>
+
+                <app-landsay-page-accordion-indicator-icon
+                  [accordionRef]="accordionGroup2"></app-landsay-page-accordion-indicator-icon>
+              </button>
+
+              <div>
+                <p translate>
+                  iVertical Payment Network (iVPN) is the Fintech company powering the Tax-Free For Life digital lottery
+                  platform. Founded in October 2017 and headquartered in Florida, iVPN operates a proprietary cashless
+                  payment infrastructure enabling secure, real-time digital transactions.
+                </p>
+
+                <p translate>
+                  iVPN operates under the framework of:
+                </p>
+
+                <ul>
+                  <li translate>Title 12, Chapter II, Part 235 of the Federal Reserve System</li>
+
+                  <li translate>The Electronic Fund Transfer Act (Regulation E)</li>
+
+                  <li translate>The National Automated Clearing House Association (NACHA) standards</li>
+                </ul>
+
+                <p translate>
+                  Under federal law, iVPN’s payment solution offers the transparency, compliance, and reliability
+                  expected of federally regulated financial services.
+                </p>
+
+                <p translate>
+                  With deep experience in digital payments and regulatory compliance, iVPN provides the technology
+                  backbone for Tax-Free For Life, ensuring seamless ticket purchases, secure transactions, and trusted
+                  fund flows.
+                </p>
+              </div>
+            </accordion-group>
+
+            <accordion-group #accordionGroup3>
+              <button accordion-heading
+                      type="button">
+
+                <span translate>
+                  How is my information secure and protected?
+                </span>
+
+                <app-landsay-page-accordion-indicator-icon
+                  [accordionRef]="accordionGroup3"></app-landsay-page-accordion-indicator-icon>
+              </button>
+
+              <div>
+                <p translate>
+                  At Tax-Free For Life, protecting your personal and financial information is a top priority. Our
+                  platform is powered by iVertical Payment Network (iVPN), a federally regulated payment technology
+                  provider that adheres to best-in-class industry security standards.
+                </p>
+
+                <p translate>
+                  Here’s how we keep your information safe:
+                </p>
+
+                <ul>
+                  <li translate>Encrypted Data Storage: All personal and financial data is stored in an encrypted
+                    database, using real-time encryption protocols from the moment you enroll.
+                  </li>
+
+                  <li translate>PIN-Protected Transactions: Every transaction is PIN-protected, adding a second layer of
+                    security to your account activity.
+                  </li>
+
+                  <li translate>Secure Enrollment: Your bank details and PIN are encrypted at the point of entry,
+                    ensuring they remain protected during transmission and storage.
+                  </li>
+
+                  <li translate>Privacy First: We do not sell or share your data with third parties for marketing
+                    purposes. Your information is only used to fulfill legal obligations or to process your lottery
+                    ticket purchases and redemptions.
+                  </li>
+
+                  <li translate>Strict Identity Verification: We request only the information necessary to securely link
+                    your funding account for ACH debit and credit transactions.
+                  </li>
+
+                  <li translate>No Phone or Email Requests: An iVPN representative will never ask for your banking
+                    details by phone or email. If you receive such a request, please report it immediately.
+                  </li>
+                </ul>
+
+                <p>
+                  {{ 'For more details, we encourage you to read our full' | translate }}&nbsp;<a
+                  href="javascript: void(0);"
+                  [routerLink]="'/privacy'"
+                  target="_blank" translate>Privacy Policy</a> and <a href="javascript: void(0);"
+                                                                      [routerLink]="'/privacy'"
+                                                                      target="_blank" translate>Terms of Service</a>.
+                </p>
+              </div>
+            </accordion-group>
+
+            <accordion-group #accordionGroup4>
+              <button accordion-heading
+                      type="button">
+
+                <span translate>
+                  What is my PIN number
+                </span>
+
+                <app-landsay-page-accordion-indicator-icon
+                  [accordionRef]="accordionGroup4"></app-landsay-page-accordion-indicator-icon>
+              </button>
+
+              <div>
+                <p [innerHTML]="'Your PIN is the four-digit Personal Identification Number that you create when you enroll. This PIN does not need to mirror your bank card PIN or any other PINs that you may use. If at any time you forget your PIN or want to change it, select PROFILE in the Member Portal. Then from the list of items in the <strong>Profile</strong> screen, click on the pencil icon on the right of the <strong>PIN</strong> line and follow the instructions accordingly in the popup that will display. You may also contact us at 1-833-xxx-xxxx or you can email us at <a href=\' mailto:\/\/AnswerYourQuestions&#64;taxfreeforlife.gov\'>AnswerYourQuestions@taxfreeforlife.gov</a>.' | translate | safeHtml">
+                </p>
+              </div>
+            </accordion-group>
+
+            <accordion-group #accordionGroup5>
+              <button accordion-heading
+                      type="button">
+
+                <span translate>
+                  Why is my email address required? Why do you send me a SMS / text message?
+                </span>
+
+                <app-landsay-page-accordion-indicator-icon
+                  [accordionRef]="accordionGroup5"></app-landsay-page-accordion-indicator-icon>
+              </button>
+
+              <div>
+                <p translate>
+                  Our system relies heavily on email and SMS/text communication to maintain the security integrity of
+                  our services. Your email address becomes your login to manage and update your account, including your
+                  PIN and other preferences, and to review your transactions.
+                </p>
+              </div>
+            </accordion-group>
+
+            <accordion-group #accordionGroup6>
+              <button accordion-heading
+                      type="button">
+
+                <span translate>
+                  How is my electronic wallet funded and how do purchase limits work?
+                </span>
+
+                <app-landsay-page-accordion-indicator-icon
+                  [accordionRef]="accordionGroup6"></app-landsay-page-accordion-indicator-icon>
+              </button>
+
+              <div>
+                <p translate>
+                  Once your enrollment is complete, you’ll be able to make an initial purchase of up to $20.00 using
+                  your linked bank account. This temporary limit helps us verify your funding source securely.
+                </p>
+
+                <p translate>
+                  As soon as we receive confirmation from your bank that the initial withdrawal was successfully
+                  processed, the temporary restriction on your wallet will be lifted.
+                </p>
+
+                <p translate>
+                  At that point, your purchase limits will increase to:
+                </p>
+
+                <ul>
+                  <li translate>
+                    Up to $50 per day
+                  </li>
+
+                  <li translate>
+                    A maximum of $500 within any rolling 3-business-day period, provided previous purchases have cleared
+                  </li>
+                </ul>
+
+                <p translate>
+                  These controls are in place to ensure secure transactions and responsible account activity as your
+                  wallet becomes fully active.
+                </p>
+              </div>
+            </accordion-group>
+
+            <accordion-group #accordionGroup7>
+              <button accordion-heading
+                      type="button">
+
+                <span translate>
+                  What is an ACH debit transaction?
+                </span>
+
+                <app-landsay-page-accordion-indicator-icon
+                  [accordionRef]="accordionGroup7"></app-landsay-page-accordion-indicator-icon>
+              </button>
+
+              <div>
+                <p translate>
+                  The Automated Clearing House (ACH) Network is a highly reliable and efficient nationwide electronic
+                  funds transfer system, governed by the NACHA Operating Rules, that provides for the interbank clearing
+                  of electronic payments for participating depository financial institutions. The Federal Reserve and
+                  Electronic Payments Network act as ACH Operators, central clearing facilities through which financial
+                  institutions transmit or receive ACH transaction entries.
+                </p>
+
+                <p translate>
+                  An ACH debit is also known as an electronic check transaction. There is a slight delay in processing
+                  these types of transactions to bank accounts. Think of it as writing a check, but it happens
+                  electronically. These types of transactions typically take three (3) business days to post to your
+                  bank account. It is your responsibility to ensure that funds are available at the time of the debit to
+                  your account. As outlined in the terms of service, you are subject to a State fee for insufficient
+                  funds if a purchase is returned by your bank. Depending on the State, fees range from $10 to $50.
+                </p>
+              </div>
+            </accordion-group>
+          </accordion>
         </div>
       </div>
     </div>
