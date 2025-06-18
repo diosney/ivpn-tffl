@@ -11,6 +11,12 @@
       padding-bottom : 12px;
     }
   }
+
+  #navbar-navList {
+    background    : rgb(255 255 255 / 89%);
+    border-radius : 6px;
+    margin-top    : .5rem;
+  }
 }
 
 @media (min-width : 992px) {
@@ -171,6 +177,9 @@ ul > li {
 }
 
 .navbar-toggler {
-  font-size    : 4rem !important;
-  margin-right : 2rem !important;
+  background    : rgba(255, 255, 255, 0.89);
+  border-radius : 6px;
+  font-size     : 3.5rem !important;
+  padding       : .3rem;
+  margin-right  : 2rem !important;
 }

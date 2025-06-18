@@ -19,6 +19,10 @@
     flex            : 1;
     justify-content : flex-end;
   }
+
+  a:first-child {
+    padding-right : 1rem;
+  }
 }
 
 form {
