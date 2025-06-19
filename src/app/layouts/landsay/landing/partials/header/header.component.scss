@@ -14,9 +14,9 @@
 
   #navbar-navList {
     background         : rgb(255 255 255 / 89%);
-    box-shadow         : 6px 6px 14px -4px rgba(0, 0, 0, 0.56);
-    -webkit-box-shadow : 6px 6px 14px -4px rgba(0, 0, 0, 0.56);
-    -moz-box-shadow    : 6px 6px 14px -4px rgba(0, 0, 0, 0.56) !important;
+    box-shadow         : 6px 6px 22px -8px rgba(0, 0, 0, 0.56);
+    -webkit-box-shadow : 6px 6px 22px -8px rgba(0, 0, 0, 0.56);
+    -moz-box-shadow    : 6px 6px 22px -8px rgba(0, 0, 0, 0.56);
     border-radius      : 6px;
     margin-top         : .5rem;
   }
@@ -83,9 +83,9 @@
   span {
     background         : rgba(255, 255, 255, 0.89);
     border-radius      : 6px;
-    box-shadow         : 6px 6px 14px -4px rgba(0, 0, 0, 0.56);
-    -webkit-box-shadow : 6px 6px 14px -4px rgba(0, 0, 0, 0.56);
-    -moz-box-shadow    : 6px 6px 14px -4px rgba(0, 0, 0, 0.56);
+    box-shadow         : 6px 6px 22px -8px rgba(0, 0, 0, 0.56);
+    -webkit-box-shadow : 6px 6px 22px -8px rgba(0, 0, 0, 0.56);
+    -moz-box-shadow    : 6px 6px 22px -8px rgba(0, 0, 0, 0.56);
     display            : block;
     font-size          : 0.7rem;
     line-height        : .9rem;
@@ -186,16 +186,18 @@ ul > li {
 
 .navbar-toggler {
   &:focus {
-    box-shadow         : 6px 6px 14px -4px rgba(0, 0, 0, 0.56);
-    -webkit-box-shadow : 6px 6px 14px -4px rgba(0, 0, 0, 0.56);
-    -moz-box-shadow    : 6px 6px 14px -4px rgba(0, 0, 0, 0.56) !important;
+    box-shadow         : 6px 6px 22px -8px rgba(0, 0, 0, 0.56);
+    -webkit-box-shadow : 6px 6px 22px -8px rgba(0, 0, 0, 0.56);
+    -moz-box-shadow    : 6px 6px 22px -8px rgba(0, 0, 0, 0.56) !important;
   }
 
   background         : rgba(255, 255, 255, 0.89);
   border-radius      : 6px;
-  box-shadow         : 6px 6px 14px -4px rgba(0, 0, 0, 0.56);
-  -webkit-box-shadow : 6px 6px 14px -4px rgba(0, 0, 0, 0.56);
-  -moz-box-shadow    : 6px 6px 14px -4px rgba(0, 0, 0, 0.56) !important;
+
+  box-shadow         : 6px 6px 22px -8px rgba(0, 0, 0, 0.56);
+  -webkit-box-shadow : 6px 6px 22px -8px rgba(0, 0, 0, 0.56);
+  -moz-box-shadow    : 6px 6px 22px -8px rgba(0, 0, 0, 0.56) !important;
+
   font-size          : 3.5rem !important;
   padding            : .3rem;
   margin-right       : 1rem !important;
