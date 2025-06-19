@@ -145,20 +145,22 @@
             </h4>
           </li>
 
-          <li class="star-align-center">
+          <li class="star-align-center its-quick-and-easy">
             <h4>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="24" height="24" fill="currentColor">
                 <polygon points="50,5 61,35 95,35 67,57 76,91 50,72 24,91 33,57 5,35 39,35"/>
               </svg>
 
-              <span translate>It’s quick, easy and FREE</span>
+              <span translate>It’s quick and easy</span>
 
-              <a href="javascript: void(0);"
-                 (click)="utilsService.scrollToSectionById('how-it-works')"
-                 class="btn btn-primary mt-4 stop-paying-taxes-button">
+              <span class="learn-more-container">
+                <a href="javascript: void(0);"
+                   (click)="utilsService.scrollToSectionById('how-it-works')"
+                   class="btn btn-primary mt-4 stop-paying-taxes-button">
 
-                <span translate>Learn More</span>
-              </a>
+                  <span translate>Learn More</span>
+                </a>
+              </span>
             </h4>
           </li>
 
@@ -172,12 +174,14 @@
               <span class="blue-dots">....</span>
               <span translate>to Stop Paying Taxes</span>
 
-              <a href="javascript: void(0);"
-                 (click)="utilsService.scrollToSectionById('your-odds')"
-                 class="btn btn-primary mt-4 stop-paying-taxes-button">
+              <span class="learn-more-container">
+                <a href="javascript: void(0);"
+                   (click)="utilsService.scrollToSectionById('your-odds')"
+                   class="btn btn-primary mt-4 stop-paying-taxes-button">
 
-                <span translate>Learn More</span>
-              </a>
+                  <span translate>Learn More</span>
+                </a>
+              </span>
             </h4>
           </li>
         </ul>

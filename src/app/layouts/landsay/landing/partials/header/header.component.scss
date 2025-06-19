@@ -13,9 +13,12 @@
   }
 
   #navbar-navList {
-    background    : rgb(255 255 255 / 89%);
-    border-radius : 6px;
-    margin-top    : .5rem;
+    background         : rgb(255 255 255 / 89%);
+    box-shadow         : 6px 6px 14px -4px rgba(0, 0, 0, 0.56);
+    -webkit-box-shadow : 6px 6px 14px -4px rgba(0, 0, 0, 0.56);
+    -moz-box-shadow    : 6px 6px 14px -4px rgba(0, 0, 0, 0.56) !important;
+    border-radius      : 6px;
+    margin-top         : .5rem;
   }
 }
 
@@ -78,15 +81,20 @@
   }
 
   span {
-    //color          : white;
-    display        : block;
-    font-size      : 0.7rem;
-    line-height    : .9rem;
-    font-style     : italic;
-    font-weight    : normal;
-    letter-spacing : .02rem;
-    margin-top     : .3rem;
-    text-align     : center;
+    background         : rgba(255, 255, 255, 0.89);
+    border-radius      : 6px;
+    box-shadow         : 6px 6px 14px -4px rgba(0, 0, 0, 0.56);
+    -webkit-box-shadow : 6px 6px 14px -4px rgba(0, 0, 0, 0.56);
+    -moz-box-shadow    : 6px 6px 14px -4px rgba(0, 0, 0, 0.56);
+    display            : block;
+    font-size          : 0.7rem;
+    line-height        : .9rem;
+    font-style         : italic;
+    font-weight        : normal;
+    letter-spacing     : .02rem;
+    margin-top         : .3rem;
+    padding            : 0.3rem;
+    text-align         : center;
   }
 }
 
@@ -177,9 +185,18 @@ ul > li {
 }
 
 .navbar-toggler {
-  background    : rgba(255, 255, 255, 0.89);
-  border-radius : 6px;
-  font-size     : 3.5rem !important;
-  padding       : .3rem;
-  margin-right  : 2rem !important;
+  &:focus {
+    box-shadow         : 6px 6px 14px -4px rgba(0, 0, 0, 0.56);
+    -webkit-box-shadow : 6px 6px 14px -4px rgba(0, 0, 0, 0.56);
+    -moz-box-shadow    : 6px 6px 14px -4px rgba(0, 0, 0, 0.56) !important;
+  }
+
+  background         : rgba(255, 255, 255, 0.89);
+  border-radius      : 6px;
+  box-shadow         : 6px 6px 14px -4px rgba(0, 0, 0, 0.56);
+  -webkit-box-shadow : 6px 6px 14px -4px rgba(0, 0, 0, 0.56);
+  -moz-box-shadow    : 6px 6px 14px -4px rgba(0, 0, 0, 0.56) !important;
+  font-size          : 3.5rem !important;
+  padding            : .3rem;
+  margin-right       : 1rem !important;
 }

@@ -1,3 +1,7 @@
+h4 {
+  width : 100%;
+}
+
 .bg-home4 {
   margin-bottom : 0;
   margin-top    : 160px;
@@ -358,6 +362,19 @@ ul li {
         text-align : center;
       }
     }
+  }
+
+  .its-quick-and-easy {
+    svg {
+      top : .5rem !important;
+    }
+  }
+
+  .learn-more-container {
+    display    : inline-block;
+    margin-top : 1rem;
+    text-align : center !important;
+    width      : 100%;
   }
 }
 
