@@ -52,13 +52,17 @@ accordion {
       //color      : var(--bs-secondary-color) !important;
       text-align : justify;
 
-      ul {
+      ul, ol {
         margin-top   : .8rem;
         padding-left : 1.3em;
 
         li {
           margin-top : .15rem;
         }
+      }
+
+      ol {
+        list-style-type : none !important;
       }
     }
   }

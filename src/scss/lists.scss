@@ -1,9 +1,16 @@
-accordion accordion-group.panel .panel-body div > ul {
-  list-style   : disc !important;
-  margin-top   : .8rem;
-  padding-left : 1.3em !important;
+accordion accordion-group.panel .panel-body div {
+  > ul, > ol {
+    list-style   : disc !important;
+    margin-top   : .8rem;
+    padding-left : 1.3em !important;
 
-  li {
-    margin-top : .15rem;
+    li {
+      margin-top : .15rem;
+    }
+  }
+
+  > ol {
+    list-style   : none !important;
+    padding-left : 0 !important;
   }
 }
